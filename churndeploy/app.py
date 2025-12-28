@@ -3,6 +3,9 @@ import pandas as pd
 import joblib
 import os
 
+import sys, streamlit as st
+st.write(sys.version)
+
 # =========================
 # LOAD MODEL
 # =========================
@@ -84,4 +87,5 @@ if st.button("🔍 Prediksi Churn"):
         st.error(f"⚠️ Pelanggan BERISIKO churn\n\nProbabilitas: {prob:.2%}")
     else:
         st.success(f"✅ Pelanggan TIDAK churn\n\nProbabilitas: {prob:.2%}")
+
 
